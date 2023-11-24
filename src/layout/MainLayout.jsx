@@ -2,17 +2,14 @@ import { Grid } from "@mui/material";
 import React from "react";
 import { Footer, Navbar } from "./components";
 import "../layout/styles/layout.css"; // Ruta al archivo CSS
-import { MainProvider } from "./context";
 
 export const MainLayout = ({ children }) => {
   return (
-    <MainProvider>
-      <div className="container__layout">
-        <Navbar />
-        <main className="main__container">{children}</main>
-        <Footer />
-      </div>
-    </MainProvider>
+    <div className="container__layout">
+      <Navbar />
+      <main className="main__container">{children}</main>
+      <Footer />
+    </div>
   );
 };
 

@@ -5,7 +5,6 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Button, ButtonGroup, Typography } from "@mui/material";
 import { Login } from "@mui/icons-material";
 import { Link } from "react-router-dom";
-import { MainContext } from "../../context/mainContext";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
@@ -18,8 +17,9 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
+const menuIsOpen = "true";
 export const Navbar = () => {
-  const { menuIsOpen, toggleMenu } = useContext(MainContext);
+  //const { menuIsOpen, toggleMenu } = useContext(MainContext);
   console.log(menuIsOpen);
 
   return (
@@ -31,10 +31,7 @@ export const Navbar = () => {
               <div className="relative flex h-16 items-center justify-between">
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                   {/* Mobile menu button*/}
-                  <Disclosure.Button
-                    onClick={toggleMenu}
-                    className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                  >
+                  <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                     {menuIsOpen ? (
                       <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
                     ) : (

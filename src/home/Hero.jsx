@@ -1,10 +1,11 @@
 import React from "react";
-import { MainLayout } from "../layout";
+//import { MainLayout } from "../layout";
 import { Box, Grid, ThemeProvider } from "@mui/material";
 import { homeTheme } from "./theme/theme";
 import { FindButton, CreatedButton } from "../components/button";
 import { Cards, FilterEvents, FilterMainEvents } from "./components";
 import styles from "./styles/home.module.css";
+import { MainLayout } from "../layout/MainLayout";
 
 export const Hero = () => {
   return (
