@@ -6,6 +6,7 @@ import { FindButton, CreatedButton } from "../components/button";
 import { Cards, FilterEvents, FilterMainEvents } from "./components";
 import styles from "./styles/home.module.css";
 import { MainLayout } from "../layout/MainLayout";
+import heroImage from "/assets/images/hero.png"; // Importa la imagen aquí
 
 export const Hero = () => {
   return (
@@ -18,11 +19,7 @@ export const Hero = () => {
           md={5}
           sx={{ order: { xs: 1, md: 2 } }}
         >
-          <img
-            className="image"
-            src="../../public/assets/images/hero.png"
-            alt=""
-          />
+          <img className="image" src={heroImage} alt="" />
         </Grid>
         <Grid
           className={styles.hero__description}

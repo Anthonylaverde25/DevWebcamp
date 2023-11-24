@@ -15,8 +15,11 @@ import styles from "./../styles/home.module.css";
 export const CardProduct = ({ event }) => {
   const { title, description, speakerID, image, speaker, date } = event;
 
-  const imagePath = `assets/imagesHome/imagesIconos/${image}`;
-  const imagePathPonente = `assets/imagesHome/imagesPonentes/speaker_${speakerID}.png`;
+  const imagePath =
+    import.meta.env.BASE_URL + "assets/imagesHome/imagesIconos/" + image;
+  const imagePathPonente =
+    import.meta.env.BASE_URL +
+    `assets/imagesHome/imagesPonentes/speaker_${speakerID}.png`;
 
   return (
     <Card sx={{ maxWidth: 350 }}>
