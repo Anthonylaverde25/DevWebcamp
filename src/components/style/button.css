@@ -1,0 +1,12 @@
+.btn {
+  color: white;
+  font-weight: bold;
+  background: rebeccapurple;
+  background-color: rgb(159 18 57);
+}
+
+.hero__buttons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

@@ -1,0 +1,36 @@
+/*INDEX.CSS PONE A DISPOSICION ESTILOS GLOBALES Y EL TAILWIND*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos base */
+/* Estilos generales que se aplicarán a todas las resoluciones */
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+
+  /* Otros estilos generales */
+}
+
+/* Media query para dispositivos móviles hasta tablets pequeñas (320px - 767px) */
+@media (min-width: 320px) and (max-width: 767px) {
+  /* Estilos específicos para tamaños de pantalla más pequeños */
+  /* Por ejemplo, ajustar el diseño para que se vea bien en dispositivos móviles */
+}
+
+/* Media query para tablets y pantallas más grandes (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Estilos para tablets y pantallas medianas */
+}
+
+/* Media query para pantallas de escritorio (1024px - 1399px) */
+@media (min-width: 1024px) and (max-width: 1399px) {
+  /* Estilos para pantallas de escritorio más pequeñas */
+}
+
+/* Media query para pantallas grandes (1400px y más) */
+@media (min-width: 1400px) {
+  /* Estilos para pantallas de escritorio más grandes */
+}

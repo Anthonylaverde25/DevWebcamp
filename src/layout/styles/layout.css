@@ -1,0 +1,48 @@
+body {
+  color: #f8fafc;
+}
+
+.container__layout {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+header,
+footer {
+  background-color: rgb(28 25 23);
+}
+
+/* Media query para dispositivos móviles hasta tablets pequeñas (320px - 767px) */
+@media (min-width: 320px) and (max-width: 767px) {
+  /* Estilos específicos para tamaños de pantalla más pequeños */
+  /* Por ejemplo, ajustar el diseño para que se vea bien en dispositivos móviles */
+
+  .container__layout {
+    min-width: 100%;
+  }
+}
+
+/* Media query para tablets y pantallas más grandes (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Estilos para tablets y pantallas medianas */
+
+  .container__layout {
+    min-width: 90%;
+  }
+}
+
+/* Media query para pantallas de escritorio (1024px - 1399px) */
+@media (min-width: 1024px) and (max-width: 1399px) {
+  /* Estilos para pantallas de escritorio más pequeñas */
+
+  .container__layout {
+    min-width: 85%;
+  }
+}
+
+/* Media query para pantallas grandes (1400px y más) */
+@media (min-width: 1400px) {
+  /* Estilos para pantallas de escritorio más grandes */
+  .container__layout {
+  }
+}
