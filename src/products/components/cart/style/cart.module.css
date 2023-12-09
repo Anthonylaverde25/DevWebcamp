@@ -1,0 +1,20 @@
+.cart__modal {
+  background-color: red;
+}
+
+.btnBuy {
+  font-weight: 400;
+  border: 1px solid gray;
+  width: 100%;
+  transition: all ease 300ms;
+
+  &:hover {
+    background-color: #eaebec;
+  }
+}
+
+.emptyCart {
+  padding: 1rem;
+  text-align: center;
+  margin: 50% auto;
+}

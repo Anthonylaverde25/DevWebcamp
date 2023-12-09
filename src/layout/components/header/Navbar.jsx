@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
-import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import { Button, ButtonGroup, Typography } from "@mui/material";
-import { Login } from "@mui/icons-material";
+import { Box, Button, ButtonGroup, Typography } from "@mui/material";
+import { Login, ShoppingCart } from "@mui/icons-material";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useSelector } from "react-redux";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
@@ -18,10 +18,9 @@ function classNames(...classes) {
 }
 
 const menuIsOpen = "true";
-export const Navbar = () => {
-  //const { menuIsOpen, toggleMenu } = useContext(MainContext);
-  console.log(menuIsOpen);
 
+export const Navbar = ({ handlerOpen }) => {
+  const { totalItems } = useSelector((state) => state.Cart);
   return (
     <header>
       <Disclosure as="nav" className="bg-stone-900">
@@ -43,7 +42,7 @@ export const Navbar = () => {
                   <div className="flex flex-shrink-0 items-center gap-10">
                     <Typography
                       variant="span"
-                      className="font-semibold uppercase border px-10 font-mono"
+                      className="font-semibold uppercase  px-10 font-monos sm:border"
                     >
                       Dev Conference
                     </Typography>
@@ -73,20 +72,18 @@ export const Navbar = () => {
                   </div>
                 </div>
                 <div className="absolute inset-y-0 right-0 flex items-center  sm:static sm:inset-auto sm:ml-6 sm:pr-0 ">
-                  <Button className="border rounded-full">
+                  <Button onClick={handlerOpen} className="border rounded-full">
                     {/*<Login />*/}
-                    <Login />
+                    <Box
+                      sx={{
+                        color: "white",
+                        fontSize: "bold",
+                      }}
+                    >
+                      {totalItems}
+                    </Box>
+                    <ShoppingCart sx={{ color: "white", fontSize: "2rem" }} />
                   </Button>
-
-                  {/* Profile dropdown */}
-                  {/* <ButtonGroup>
-              <Button>
-                <Typography className="font-mono">
-                  Login
-                  <Login />
-                </Typography>
-              </Button>
-            </ButtonGroup>*/}
                 </div>
               </div>
             </div>

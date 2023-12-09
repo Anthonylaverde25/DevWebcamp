@@ -46,3 +46,14 @@ footer {
   .container__layout {
   }
 }
+
+.prueba {
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+
+.prueba div {
+  background-color: white;
+  padding: 1rem;
+}

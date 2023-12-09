@@ -19,7 +19,7 @@ export const Hero = () => {
           md={5}
           sx={{ order: { xs: 1, md: 2 } }}
         >
-          <img className="image" src={heroImage} alt="" />
+          <img className="image w-full h-full" src={heroImage} alt="" />
         </Grid>
         <Grid
           className={styles.hero__description}

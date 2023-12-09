@@ -1,13 +1,25 @@
 import { Grid } from "@mui/material";
-import React from "react";
-import { Footer, Navbar } from "./components";
+import { CalendarDaysIcon, HandRaisedIcon } from "@heroicons/react/24/outline";
+
+import React, { useState } from "react";
+import { Footer, MainInfo, Navbar, Newsletter } from "./components";
 import "../layout/styles/layout.css"; // Ruta al archivo CSS
+import { ProductCart } from "../products/components/cart/ProductCart";
 
 export const MainLayout = ({ children }) => {
+  const [open, setOpen] = useState(false);
+
+  const handlerOpen = () => {
+    setOpen((prev) => !prev);
+  };
+
   return (
     <div className="container__layout">
-      <Navbar />
+      {open && <ProductCart open={open} setOpen={setOpen} />}
+      <Navbar handlerOpen={handlerOpen} />
       <main className="main__container">{children}</main>
+      <MainInfo />
+      <Newsletter />
       <Footer />
     </div>
   );

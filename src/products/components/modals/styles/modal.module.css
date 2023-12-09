@@ -1,0 +1,153 @@
+.modal__container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  margin: 5vh 0;
+  height: 500px;
+  min-width: 310px;
+  padding: 1rem;
+  background-color: #fff;
+  color: #2d2f31;
+  z-index: 10;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.2rem;
+
+  .modal__header {
+    font-size: clamp(1rem, 0.629rem + 1.524vw, 1.5rem);
+    font-weight: bold;
+    padding: 0.7rem;
+    gap: 1rem;
+  }
+
+  .modal__body {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    height: 350px;
+
+    .body {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      .image__container {
+        padding: 0.5rem;
+        background-color: #fff7ed;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.modalBTN {
+  border-radius: unset;
+  height: 70px;
+  margin-top: 1rem;
+  background-color: #1f2937;
+  font-weight: bold;
+  font-size: clamp(1rem, 0.629rem + 1.524vw, 1.1rem);
+  transition: all ease 300ms;
+  color: #fff;
+  border: none;
+
+  &:hover {
+    background-color: #374151;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+}
+
+@media screen and (max-width: 1024px) {
+  .modal__header {
+    justify-content: center;
+  }
+  .modal__body {
+    justify-content: left;
+  }
+  .modal__container {
+    width: 90%;
+  }
+
+  .body {
+    .image__container {
+      margin-bottom: 10px;
+    }
+
+    .bodyText {
+      width: 100%;
+      padding: 0.5rem;
+    }
+  }
+
+  .modalBTN {
+    font-size: 1rem;
+    max-width: 320px;
+    width: 100%;
+  }
+}
+
+/*  MODAL DELETE */
+.overlay__delete {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 115;
+}
+.modal__delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  margin: 5vh 0;
+  height: 200px;
+  min-width: 310px;
+  padding: 1rem;
+  background-color: #fff;
+  color: #2d2f31;
+  z-index: 116;
+  cursor: pointer;
+
+  .warning__mesagge-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 0.5rem;
+    height: 10%;
+
+    .warning__text-header {
+      font-size: clamp(1rem, 0.629rem + 1.524vw, 1.3rem);
+    }
+  }
+}

@@ -15,6 +15,7 @@ import styles from "./../styles/home.module.css";
 export const CardProduct = ({ event }) => {
   const { title, description, speakerID, image, speaker, date } = event;
 
+  //import.meta.env.BASE_URL: Es una característica de Vite que te proporciona la URL base de tu aplicación. En resumen, es la dirección principal donde se encuentra tu sitio web.
   const imagePath =
     import.meta.env.BASE_URL + "assets/imagesHome/imagesIconos/" + image;
   const imagePathPonente =
