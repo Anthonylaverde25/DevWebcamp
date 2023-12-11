@@ -13,7 +13,7 @@ export const FilterProducts = ({ toggleFilter }) => {
 
       <Box className={`${styles.orderBy__product}`}>
         <select className={`${styles.select__order}`} name="" id="">
-          <option value="">dsdsdsdsds</option>
+          <option value="">Elaborando</option>
         </select>
       </Box>
     </Grid>

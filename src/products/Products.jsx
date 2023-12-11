@@ -16,8 +16,8 @@ export const Products = () => {
     <MainLayout>
       <header className="bg-gradient-to-b from-blue-500 to-blue-700 py-10 text-center text-white">
         <h1 className="text-5xl font-bold mb-4">find your next conference</h1>
-        <p className="text-lg">
-          Bienvenido a nuestra plataforma innovadora y única.
+        <p className="text-lg font-semibold">
+          Welcome to our innovative and unique platform.
         </p>
       </header>
 

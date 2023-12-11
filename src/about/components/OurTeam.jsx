@@ -15,8 +15,7 @@ export const OurTeam = () => {
             </h2>
           </div>
           <p className="font-bold text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">
-            Explore the whole collection of open-source web components and
-            elements built with the utility classes from Tailwind
+            Get to know our team, made up of professionals in the area.
           </p>
         </div>
 
