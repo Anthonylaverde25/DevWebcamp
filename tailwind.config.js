@@ -21,6 +21,7 @@ export default {
         warning: "#f6e05e", // Color de texto de advertencia
         danger: "#e3342f", // Color de texto de peligro
         textModal: "#0f172a",
+        green: "#059669",
         // Agrega más colores de texto si es necesario
       },
       backgroundColor: {

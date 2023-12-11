@@ -18,7 +18,33 @@
       font-weight: bold;
     }
   }
+
+  .borderImage {
+    box-shadow: -4px -1px 10px 1px rgba(0, 0, 0, 0.24);
+    -webkit-box-shadow: -4px -1px 10px 1px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: -4px -1px 10px 1px rgba(0, 0, 0, 0.24);
+  }
 }
+
+.about__descriptions-sections {
+  .about__description {
+    h2 {
+      line-height: 1.2;
+      color: #0f172a;
+      font-size: clamp(2.5rem, -0.25rem + 3.333vw, 3.5rem);
+    }
+
+    a {
+      color: white;
+    }
+
+    p {
+      font-size: clamp(1rem, -0.25rem + 3.333vw, 1.2rem);
+    }
+  }
+}
+
+/*
 .hero__team {
   display: flex;
   align-items: center;
@@ -49,7 +75,7 @@
       height: 100%;
     }
   }
-}
+}*/
 
 .team__container {
   padding: 0.5rem;

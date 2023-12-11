@@ -4,6 +4,8 @@ import { Hero } from "../home";
 import { About } from "../about";
 import { Products } from "../products/Products";
 import { Basket } from "../basket";
+import { Contacts } from "@mui/icons-material";
+import { ContactsUS } from "../contacts";
 //import { About } from "../about";
 
 export const AppRouter = () => {
@@ -12,6 +14,7 @@ export const AppRouter = () => {
       <Route path="/" element={<Hero />} />
       <Route path="/about" element={<About />} />
       <Route path="/products" element={<Products />} />
+      <Route path="/contacts" element={<ContactsUS />} />
 
       <Route path="/products/cart" element={<Products />} />
       <Route path="/products/basket" element={<Basket />} />
