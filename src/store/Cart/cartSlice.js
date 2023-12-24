@@ -1,13 +1,27 @@
 import { ClassSharp } from "@mui/icons-material";
 import { createSlice } from "@reduxjs/toolkit";
+import { json } from "react-router-dom";
+
+const getInitialCart = () => {
+  const cart = localStorage.getItem("cart");
+  return cart
+    ? JSON.parse(cart)
+    : {
+        products: [],
+        total: 0,
+        totalItems: 0,
+      };
+};
 
 export const cartSlice = createSlice({
   name: "cart",
+  initialState: getInitialCart(),
+  /*
   initialState: {
     products: [],
     total: 0,
     totalItems: 0,
-  },
+  },*/
 
   reducers: {
     addItem: (state, action) => {
@@ -35,6 +49,8 @@ export const cartSlice = createSlice({
 
       state.total += action.payload.precio;
       state.totalItems++;
+
+      localStorage.setItem("cart", JSON.stringify(state));
     },
 
     removeItem: (state, { payload }) => {
@@ -56,6 +72,8 @@ export const cartSlice = createSlice({
       state.total = 0;
       state.totalItems = 0;
       state.products = [];
+
+      localStorage.removeItem("cart");
     },
 
     increaseProduct: (state, action) => {
@@ -94,6 +112,8 @@ export const cartSlice = createSlice({
           product.totalProducto = product.cantidad * product.precio;
         }
       }
+
+      localStorage.setItem("cart", JSON.stringify(state));
     },
   },
 });

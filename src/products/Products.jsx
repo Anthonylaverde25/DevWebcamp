@@ -32,30 +32,3 @@ export const Products = () => {
     </MainLayout>
   );
 };
-
-/*
-
-   <div className={`${styles["products__container--grid"]}`}>
-        <Grid className={`${styles.products__container}`}>
-          <RenderProducts />
-        </Grid>
-      </div>
-
-<Grid className={`${styles.products__container}`}>
-          {isFilterOpen && (
-            <FilterItems
-              className={`${styles["filter-items"]} ${
-                isFilterOpen ? "show" : ""
-              }`}
-            />
-          )}
-
-          <RenderProducts />
-        </Grid>
-
-
-
-
-
-
-*/
