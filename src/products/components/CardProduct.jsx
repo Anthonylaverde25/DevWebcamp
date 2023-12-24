@@ -57,6 +57,62 @@ export const CardProduct = ({ product }) => {
   }assets/imagesCourse/${tecnology}.svg`;
 
   return (
+    <div
+      className={`${styles.card_productPrueba} w-full max-w-sm   border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700`}
+    >
+      <div className={`${styles["card_image-container"]}`}>
+        <img
+          className={`${styles.card_image} p-8 rounded-t-lg w-full`}
+          src={imagePath}
+          alt="product image"
+        />
+      </div>
+
+      <div className="px-5 pb-5 h-max">
+        <div className="mt-3 flex justify-center  flex-col">
+          <div>
+            <Typography className={`${styles.name__title}`} variant="h5">
+              {name}
+            </Typography>
+          </div>
+
+          <div className="mb-2">
+            <Typography
+              className={`${styles.speaker__title}`}
+              style={{ marginTop: "10px" }}
+              variant="body2"
+            >
+              {speaker}
+            </Typography>
+          </div>
+
+          <div className={`${styles.description__container}`}>
+            <Typography className={`${styles.description} text-base py-3`}>
+              {description}
+            </Typography>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-between  p-2">
+        <span className="text-3xl font-bold text-gray-900 dark:text-white">
+          ${price}
+        </span>
+
+        <Button
+          className={`${styles.btnAdd} `}
+          onClick={handlerApp}
+          disabled={isAdd}
+        >
+          {isAdd ? (
+            <CircularProgress size={25} sx={{ color: "#f43f5e" }} />
+          ) : (
+            "Add to cart"
+          )}
+        </Button>
+      </div>
+    </div>
+    /*
     <>
       {<ModalAdd open={open} onClose={handlerClose} product={product} />}
 
@@ -96,7 +152,8 @@ export const CardProduct = ({ product }) => {
             <div className=" font-bold">{price}$</div>
           </div>
         </div>
-        {/*realizando el toolpit */}
+
+        
         <div className={`${styles.tooltipText}`}>
           <Typography
             sx={{
@@ -135,111 +192,6 @@ export const CardProduct = ({ product }) => {
           </div>
         </div>
       </div>
-    </>
+    </>*/
   );
 };
-
-/*  
-
-<FavoriteBorder size={30} />
-
-
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-<CircularProgress />
-Add to cart
-
-import FavoriteIcon from '@mui/icons-material/Favorite';
-
-<div id="tooltip-animation" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-    <div
-      className={`w-full ${styles.card}   overflow-hidden shadow-lg bg-white flex flex-col md:flex-row`}
-    >
-      <div className={`${styles.card__images}px-6 py-4`}>
-        <div className={`${styles["card__container-image"]}`}>
-          <img className="w-full" src={imagePath} alt="Imagen del producto" />
-        </div>
-      </div>
-
-      <div className={`${styles.card__description} px-6 py-4`}>
-        <div className=" text-xl my-2">
-          <Typography className={`${styles.name__title}`} variant="p">
-            {name}
-          </Typography>
-          <Typography
-            className={`${styles.speaker__title}`}
-            style={{ paddingLeft: "2rem", marginTop: "10px" }}
-            variant="body2"
-          >
-            {speaker}
-          </Typography>
-        </div>
-
-        <div className={`${styles.description__container}`}>
-          <Typography className={`${styles.description} text-base py-3`}>
-            {description}
-          </Typography>
-        </div>
-        <div className=" font-bold">{price}$</div>
-
-        <Button
-          sx={{ border: "1px solid", width: "100px", marginTop: "5px" }}
-          onClick={handlerAdd}
-        >
-          add
-        </Button>
-      </div>
-    </div>
-    <div class="tooltip-arrow" data-popper-arrow></div>
-</div>
-*/
-
-/*
-
-
-
-
-<div
-      className={`w-full ${styles.card}   overflow-hidden shadow-lg bg-white flex flex-col md:flex-row`}
-    >
-      <div className={`${styles.card__images}px-6 py-4`}>
-        <div className={`${styles["card__container-image"]}`}>
-          <img className="w-full" src={imagePath} alt="Imagen del producto" />
-        </div>
-      </div>
-
-      <div className={`${styles.card__description} px-6 py-4`}>
-        <div className=" text-xl my-2">
-          <Typography className={`${styles.name__title}`} variant="p">
-            {name}
-          </Typography>
-          <Typography
-            className={`${styles.speaker__title}`}
-            style={{ paddingLeft: "2rem", marginTop: "10px" }}
-            variant="body2"
-          >
-            {speaker}
-          </Typography>
-        </div>
-
-        <div className={`${styles.description__container}`}>
-          <Typography className={`${styles.description} text-base py-3`}>
-            {description}
-          </Typography>
-        </div>
-        <div className=" font-bold">{price}$</div>
-
-        <Button
-          sx={{ border: "1px solid", width: "100px", marginTop: "5px" }}
-          onClick={handlerAdd}
-        >
-          add
-        </Button>
-      </div>
-    </div>
-
-
-
-
-
-
-*/

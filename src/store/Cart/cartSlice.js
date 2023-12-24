@@ -90,6 +90,8 @@ export const cartSlice = createSlice({
       } else {
         console.log(`el producto no se encuentra en el carrito`);
       }
+
+      localStorage.setItem("cart", JSON.stringify(state));
     },
 
     decreaseProduct: (state, action) => {

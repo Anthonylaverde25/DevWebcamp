@@ -25,7 +25,7 @@ export const Products = () => {
         <FilterProducts toggleFilter={toggleFilter} />
       </Grid>
 
-      <Grid className={`${styles.products__container} `}>
+      <Grid className={`${styles.products__container}`}>
         {isFilterOpen && <FilterItems />}
         <RenderProducts />
       </Grid>
