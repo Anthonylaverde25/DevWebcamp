@@ -1,7 +1,7 @@
 import styles from "./../styles/products.module.css";
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, CircularProgress, Typography } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem } from "../../store/Cart/cartSlice";
@@ -55,6 +55,14 @@ export const CardProduct = ({ product }) => {
   const imagePath = `${
     import.meta.env.BASE_URL
   }assets/imagesCourse/${tecnology}.svg`;
+
+  {
+    /* PROBANDO INICIO */
+  }
+
+  {
+    /* PROBANDO FIN */
+  }
 
   return (
     <div

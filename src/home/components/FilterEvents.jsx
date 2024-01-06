@@ -9,7 +9,7 @@ export const FilterEvents = () => {
       <input
         className={styles.form__input}
         type="text"
-        placeholder="buenos aires..."
+        placeholder="buenos airess..."
       />
     </form>
   );

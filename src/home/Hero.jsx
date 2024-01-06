@@ -1,9 +1,9 @@
 import React from "react";
 //import { MainLayout } from "../layout";
-import { Box, Grid, ThemeProvider } from "@mui/material";
+import { Box, Button, Grid, ThemeProvider, Typography } from "@mui/material";
 import { homeTheme } from "./theme/theme";
 import { FindButton, CreatedButton } from "../components/button";
-import { Cards, FilterEvents, FilterMainEvents } from "./components";
+import { Banner, Cards, FilterEvents, FilterMainEvents } from "./components";
 import styles from "./styles/home.module.css";
 import { MainLayout } from "../layout/MainLayout";
 import heroImage from "/assets/images/hero.png"; // Importa la imagen aquí
@@ -48,11 +48,15 @@ export const Hero = () => {
         </Grid>
       </Grid>
       <Grid className={`${styles.filter__container}`} xs={12}>
-        <FilterEvents />
-        <FilterMainEvents />
+        <Banner />
       </Grid>
-      <Grid className={`${styles.cards__container}`} container xs={12}>
-        <Cards />
+      <Grid className={`${styles.discover} text-dark`}>
+        <h2>
+          Discover what you <span className="text-green">can learn</span>
+        </h2>
+        <div className={`${styles.card_slice} flex flex-col `}>
+          <Cards />
+        </div>
       </Grid>
     </MainLayout>
   );

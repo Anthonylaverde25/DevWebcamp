@@ -7,3 +7,4 @@ export * from "./ListItems";
 export * from "./EventSelect";
 export * from "./Cards";
 export * from "./CardProduct";
+export * from "./Banner";

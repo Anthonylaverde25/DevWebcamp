@@ -132,6 +132,7 @@ export const products = [
       // Agrega más puntos si es necesario
     ],
   },
+
   // Puedes agregar más eventos según sea necesario
 ];
 
