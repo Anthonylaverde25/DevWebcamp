@@ -6,21 +6,58 @@ import {
   CardContent,
   CardHeader,
   CardMedia,
+  CircularProgress,
   IconButton,
   Typography,
 } from "@mui/material";
 import { red } from "@mui/material/colors";
 
 import styles from "./../styles/home.module.css";
+import { useDispatch } from "react-redux";
+import { addItem } from "../../store/Cart/cartSlice";
+import { useState } from "react";
+
 export const CardProduct = ({ event }) => {
-  const { title, description, speakerID, image, speaker, date } = event;
+  const dispatch = useDispatch();
+  const [isAdd, setAdd] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  const {
+    nombre: title,
+    descripcion: description,
+    speakerID,
+    image,
+    speaker,
+    date,
+    precio: price,
+    tecnologia: tecnology,
+  } = event;
 
   //import.meta.env.BASE_URL: Es una característica de Vite que te proporciona la URL base de tu aplicación. En resumen, es la dirección principal donde se encuentra tu sitio web.
+  /*
   const imagePath =
-    import.meta.env.BASE_URL + "assets/imagesHome/imagesIconos/" + image;
+    import.meta.env.BASE_URL + "assets/imagesHome/imagesIconos/" + image;*/
+
+  const imagePath = `${
+    import.meta.env.BASE_URL
+  }assets/imagesCourse/${tecnology}.svg`;
+
   const imagePathPonente =
     import.meta.env.BASE_URL +
     `assets/imagesHome/imagesPonentes/speaker_${speakerID}.png`;
+
+  const handlerApp = async () => {
+    setAdd(true);
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      dispatch(addItem(event));
+      setAdd(false);
+
+      setOpen(true);
+    } catch (error) {
+      setAdd(false);
+    }
+  };
 
   return (
     <Card sx={{ maxWidth: 350 }}>
@@ -49,9 +86,20 @@ export const CardProduct = ({ event }) => {
           {description}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">More</Button>
+      <CardActions className="flex flex-col gap-2 justify-end">
+        <Button
+          sx={{ border: "1px solid", width: "100%" }}
+          className={`${styles.btnAdd}  `}
+          onClick={handlerApp}
+          disabled={isAdd}
+        >
+          {isAdd ? (
+            <CircularProgress size={25} sx={{ color: "#f43f5e" }} />
+          ) : (
+            "Add to cart"
+          )}
+        </Button>
+        <div className="flex justify-star  w-full">{price} $</div>
       </CardActions>
     </Card>
   );

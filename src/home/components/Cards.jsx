@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { CardProduct } from "./CardProduct";
 import { Button, Grid } from "@mui/material";
 import { eventData } from "../../data/eventData.js";
+import { useDispatch } from "react-redux";
+import { useState } from "react";
+import { addItem } from "../../store/Cart/cartSlice.js";
 
 export const Cards = () => {
   const events = eventData;
