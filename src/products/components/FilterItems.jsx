@@ -11,7 +11,8 @@ export const FilterItems = () => {
       <div className={`${styles.filter__items}`}>
         <LenguageFilter />
         <br />
-        <Button sx={{ width: "100%", border: "1px solid" }}>Filtrar</Button>
+        {/*         <Button sx={{ width: "100%", border: "1px solid" }}>Filtrar</Button>
+         */}
       </div>
     </div>
   );

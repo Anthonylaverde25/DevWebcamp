@@ -24,7 +24,7 @@ export const FilterProducts = ({ toggleFilter }) => {
         <input
           className={`${styles.select__order}`}
           type="text"
-          placeholder="Buscar producto..."
+          placeholder="Search course..."
           //value={}
           onChange={handlerSearch}
         />
